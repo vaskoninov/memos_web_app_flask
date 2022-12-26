@@ -1,1 +1,8 @@
-# memos_web_app_flask
+# A nice Student Memo Tracking App 
+
+## technologies used
+- Python
+- Flask
+- HTML
+- CSS
+- JavaScript
