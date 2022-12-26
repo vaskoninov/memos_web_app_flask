@@ -1,0 +1,62 @@
+{% extends "layout.html" %} {% block title %} Add memo {% endblock %} {% block
+main %}
+<form action="/add_memo" method="post">
+  <div class="mb-3">
+    <input
+      autocomplete="off"
+      autofocus
+      class="form-control mx-auto w-auto"
+      id="first_name"
+      name="first_name"
+      placeholder="First"
+      type="text"
+    />
+  </div>
+  <div class="mb-3">
+    <input
+      class="form-control mx-auto w-auto"
+      id="second_name"
+      name="second_name"
+      placeholder="Second"
+      type="text"
+    />
+  </div>
+  <div class="mb-3">
+    <input
+      class="form-control mx-auto w-auto"
+      id="section"
+      name="section"
+      placeholder="Section"
+      type="text"
+    />
+  </div>
+  <div class="mb-3">
+    <input
+      class="form-control mx-auto w-auto"
+      id="memo"
+      name="memo"
+      placeholder="Memo"
+      type="text"
+    />
+  </div>
+  <div class="mb-3">
+    <input
+      class="form-control mx-auto w-auto"
+      id="teacher"
+      name="teacher"
+      placeholder="Teacher"
+      type="text"
+    />
+  </div>
+  <div class="mb-3">
+    <input
+      class="form-control mx-auto w-auto"
+      id="date"
+      name="date"
+      placeholder="Date"
+      type="text"
+    />
+  </div>
+  <button class="btn btn-primary" type="submit">Register</button>
+</form>
+{% endblock %}

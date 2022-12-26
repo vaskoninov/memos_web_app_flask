@@ -1,0 +1,62 @@
+{% extends "layout.html" %} {% block title %} Action Taken {% endblock %} {%
+block main %}
+<form action="/action" method="post">
+  <div class="mb-3">
+    <input
+      autocomplete="off"
+      autofocus
+      class="form-control mx-auto w-auto"
+      id="first_name"
+      name="first_name"
+      placeholder="First"
+      type="text"
+    />
+  </div>
+  <div class="mb-3">
+    <input
+      class="form-control mx-auto w-auto"
+      id="second_name"
+      name="second_name"
+      placeholder="Second"
+      type="text"
+    />
+  </div>
+  <div class="mb-3">
+    <input
+      class="form-control mx-auto w-auto"
+      id="section"
+      name="section"
+      placeholder="Section"
+      type="text"
+    />
+  </div>
+  <div class="mb-3">
+    <input
+      class="form-control mx-auto w-auto"
+      id="action"
+      name="action"
+      placeholder="Action"
+      type="textarea"
+    />
+  </div>
+  <div class="mb-3">
+    <input
+      class="form-control mx-auto w-auto"
+      id="contacted"
+      name="contacted"
+      placeholder="Contacted"
+      type="text"
+    />
+  </div>
+  <div class="mb-3">
+    <input
+      class="form-control mx-auto w-auto"
+      id="contact_date"
+      name="contact_date"
+      placeholder="Date of Contact"
+      type="text"
+    />
+  </div>
+  <button class="btn btn-primary" type="submit">Register</button>
+</form>
+{% endblock %}

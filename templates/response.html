@@ -1,0 +1,83 @@
+{% extends "layout.html" %} {% block title %} Response {% endblock %} {% block
+main %}
+<form action="/update_action" method="post">
+  <div class="mb-3">
+    <input
+      class="form-control mx-auto w-auto"
+      id="action_id"
+      name="action_id"
+      type="hidden"
+      value="{{ action_id }}"
+    />
+    <p>{{ first_name }}</p>
+    <input
+      autocomplete="off"
+      autofocus
+      class="form-control mx-auto w-auto"
+      id="first_name"
+      name="first_name"
+      type="hidden"
+      value="{{ first_name }}"
+    />
+  </div>
+  <div class="mb-3">
+    <p>{{ second_name }}</p>
+    <input
+      class="form-control mx-auto w-auto"
+      id="second_name"
+      name="second_name"
+      type="hidden"
+      value="{{ second_name }}"
+    />
+  </div>
+  <div class="mb-3">
+    <p>{{ section }}</p>
+    <input
+      class="form-control mx-auto w-auto"
+      id="section"
+      name="section"
+      type="hidden"
+      value="{{ section }}"
+    />
+  </div>
+  <div class="mb-3">
+    <p>{{ contacted }}</p>
+    <input
+      class="form-control mx-auto w-auto"
+      id="contacted"
+      name="contacted"
+      type="hidden"
+      value="{{ contacted }}"
+    />
+  </div>
+  <div class="mb-3">
+    <p>{{ action_taken }}</p>
+    <input
+      class="form-control mx-auto w-auto"
+      id="action_taken"
+      name="action_taken"
+      type="hidden"
+      value="{{ action_taken }}"
+    />
+  </div>
+  <div class="mb-3">
+    <input
+      class="form-control mx-auto w-auto"
+      id="response"
+      name="response"
+      placeholder="Response"
+      type="textarea"
+    />
+  </div>
+  <div class="mb-3">
+    <input
+      class="form-control mx-auto w-auto"
+      id="response_date"
+      name="response_date"
+      placeholder="Date of Response"
+      type="text"
+    />
+  </div>
+  <button class="btn btn-primary" type="submit">Register</button>
+</form>
+{% endblock %}

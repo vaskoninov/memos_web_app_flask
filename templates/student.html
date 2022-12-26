@@ -1,0 +1,62 @@
+{% extends "layout.html" %} {% block title %} Student Profile {% endblock %} {%
+block main %}
+<h1>{{ student_name }}</h1>
+<h2>Memos</h2>
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Teacher</th>
+      <th>Memo</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for memo in memos %}
+    <tr>
+      <td>{{ memo['date'] }}</td>
+      <td>{{ memo['teacher'] }}</td>
+      <td>{{ memo['memo'] }}</td>
+      <td>
+        <form action="/add_new" method="post">
+          <button name="add_memo" value="{{ student }}" type="submit">
+            Add New Memo
+          </button>
+        </form>
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+  <tfoot></tfoot>
+</table>
+<h2>Actions</h2>
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Action Taken</th>
+      <th>Contacted person</th>
+      <th>Response</th>
+      <th>Date of Response</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for action in actions %}
+    <tr>
+      <td>{{ action['date_of_contact'] }}</td>
+      <td>{{ action['action_taken'] }}</td>
+      <td>{{ action['contacted'] }}</td>
+      <td>{{ action['response'] }}</td>
+      <td>{{ action['date_of_response'] }}</td>
+      <td>
+        <form action="/response" method="post">
+          <button name="response" value="{{ action['id'] }}" type="submit">
+            Response
+          </button>
+        </form>
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+  <tfoot></tfoot>
+</table>
+{% endblock %}

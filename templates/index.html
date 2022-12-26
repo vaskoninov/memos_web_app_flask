@@ -1,0 +1,41 @@
+{% extends "layout.html" %} {% block title %} Students with Memos {% endblock %}
+{% block main %}
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>First Name</th>
+      <th>Family Name</th>
+      <th>Section</th>
+      <th class="text-end">Total Memos</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for student in students %}
+    <tr>
+      <form action="/student" method="post" id="{{loop.index}}">
+        <td>
+          <input type="hidden" name="student" value="{{ student ['s_id'] }}" />
+          <a href="#" onclick="document.getElementById('{{loop.index}}').submit();"
+            >{{ student["first_name"] }}</a
+          >
+        </td>
+        <td>
+          <input type="hidden" name="student" value="{{ student ['s_id'] }}" />
+          <a href="#" onclick="document.getElementById('{{loop.index}}').submit();"
+            >{{ student["second_name"] }}</td>
+      </form>
+      <td>{{ student["section"] }}</td>
+      <td class="text-end">{{ student["number_m"] }}</td>
+      <td>
+        <form action="/add_new" method="post">
+          <button name="add_memo" value="{{ student ['s_id'] }}" type="submit">
+            Add New Memo
+          </button>
+        </form>
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+  <tfoot></tfoot>
+</table>
+{% endblock %}

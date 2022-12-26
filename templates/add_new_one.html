@@ -1,0 +1,72 @@
+{% extends "layout.html" %} {% block title %} Add new memo {% endblock %} {%
+block main %}
+<form action="/add_new_one" method="post">
+  <div class="mb-3">
+    <input
+      class="form-control mx-auto w-auto"
+      id="s_id"
+      name="s_id"
+      type="hidden"
+      value="{{ s_id }}"
+    />
+    <p>{{ first_name }}</p>
+    <input
+      autocomplete="off"
+      autofocus
+      class="form-control mx-auto w-auto"
+      id="first_name"
+      name="first_name"
+      type="hidden"
+      value="{{ first_name }}"
+    />
+  </div>
+  <div class="mb-3">
+    <p>{{ second_name }}</p>
+    <input
+      class="form-control mx-auto w-auto"
+      id="second_name"
+      name="second_name"
+      type="hidden"
+      value="{{ second_name }}"
+    />
+  </div>
+  <div class="mb-3">
+    <p>{{ section }}</p>
+    <input
+      class="form-control mx-auto w-auto"
+      id="section"
+      name="section"
+      type="hidden"
+      value="{{ section }}"
+    />
+  </div>
+  <div class="mb-3">
+    <input
+      class="form-control mx-auto w-auto"
+      id="memo"
+      name="memo"
+      placeholder="Memo"
+      type="text"
+    />
+  </div>
+  <div class="mb-3">
+    <input
+      class="form-control mx-auto w-auto"
+      id="teacher"
+      name="teacher"
+      placeholder="Teacher"
+      type="text"
+    />
+  </div>
+  <div class="mb-3">
+    <input
+      class="form-control mx-auto w-auto"
+      id="date"
+      name="date"
+      placeholder="Date"
+      type="text"
+    />
+  </div>
+  <button class="btn btn-primary" type="submit">Register</button>
+</form>
+{% endblock %}

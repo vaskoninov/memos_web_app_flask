@@ -1,0 +1,19 @@
+body {
+    background-color: #45196e;
+}
+
+h1, h2, p {
+    color: white;
+}
+
+table:hover {
+    --bs-table-hover-color: white;
+}
+
+thead {
+    color: white;
+}
+
+tbody {
+    color: white;
+}
